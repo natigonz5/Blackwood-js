@@ -1,0 +1,115 @@
+{
+    "productosDisponibles": 
+        [{
+            "tipo":"Silla",
+            "nombre":"Tokio",
+            "precio":"9500",
+            "caracteristicas": "Hecha en madera Paraíso - 75x65",
+            "img": "../img/Producto/silla/silla2.jpg",
+            "idProducto":1,
+            "cantidad":1
+        },
+        {
+            "tipo":"Silla",
+            "nombre":"Roma",
+            "precio":"8200",
+            "caracteristicas": "Realizada en Pino Brasil - 50x60",
+            "img": "../img/Producto/silla/silla3.jpg",
+            "idProducto":2,
+            "cantidad":1
+
+        },
+        {
+            "tipo":"Silla",
+            "nombre":"Waldorf",
+            "precio":"5670",
+            "caracteristicas": "Hecha en madera Paraíso - 75x80",
+            "img": "../img/Producto/silla/silla4.jpg",
+            "idProducto":3,
+            "cantidad":1
+        },
+        {
+            "tipo":"Silla",
+            "nombre":"Minium",
+            "precio":"7800",
+            "caracteristicas": "Realizada en Pino Brasil - 50x60",
+            "img": "../img/Producto/silla/silla5.jpg",
+            "idProducto":4,
+            "cantidad":1
+        },
+        {
+            "tipo":"Silla",
+            "nombre":"Next",
+            "precio":"9060",
+            "caracteristicas": "Hecha en madera Paraíso - 75x80",
+            "img": "../img/Producto/silla/silla6.jpg",
+            "idProducto":5,
+            "cantidad":1
+        },
+        {
+            "tipo":"Mesa",
+            "nombre":"London",
+            "precio":"40000",
+            "caracteristicas": "Realizada en Pino Brasil - 50x60",
+            "img": "../img/Producto/mesa/mesa1.jpg",
+            "idProducto":6,
+            "cantidad":1
+        },
+        {
+            "tipo":"Mesa",
+            "nombre":"Escandinava",
+            "precio":"40000",
+            "caracteristicas": "Hecha en madera Paraíso - 75x80",
+            "img": "../img/Producto/mesa/mesa2.jpg",
+            "idProducto":7,
+            "cantidad":1
+        },
+        {
+            "tipo":"Escritorio",
+            "nombre":"Simply",
+            "precio":"40000",
+            "caracteristicas": "Realizada en Pino Brasil - 50x60",
+            "img": "../img/Producto/escritorio/escritorio1.jpg",
+            "idProducto":8,
+            "cantidad":1
+        },
+        {
+            "tipo":"Estanteria",
+            "nombre":"Smooth",
+            "precio":"20000",
+            "caracteristicas": "Hecha en madera Paraíso - 75x80",
+            "img": "../img/Producto/estanteria/estanteria1.jpg",
+            "idProducto":9,
+            "cantidad":1
+        },
+        
+        {
+            "tipo":"Estanteria",
+            "nombre":"Cubik",
+            "precio":"30000",
+            "caracteristicas": "Hecha en madera Paraíso - 75x80s",
+            "img": "../img/Producto/estanteria/estanteria2.jpg",
+            "idProducto":10,
+            "cantidad":1
+        },
+        {
+            "tipo":"Estanteria",
+            "nombre":"Broken",
+            "precio":"4000",
+            "caracteristicas": "Hecha en madera Paraíso - 75x80",
+            "img": "../img/Producto/estanteria/estanteria3.jpg",
+            "idProducto":11,
+            "cantidad":1
+        },
+        {
+            "tipo":"Estanteria",
+            "nombre":"Clasic",
+            "precio":"4000",
+            "caracteristicas": "Realizada en Pino Brasil - 50x60",
+            "img": "../img/Producto/estanteria/estanteria4.jpg",
+            "idProducto":12,
+            "cantidad":1
+        }
+    ]
+
+}

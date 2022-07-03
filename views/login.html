@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackwood | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vex.css" />
+
+</head>
+<body>
+<!--NAV-->
+<div class="contenedorNavbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark contenedorNav">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/icons/logo-01.png" alt="" class="logoNavbar">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="logoCarrito">
+            <a class="navbar-brand" href="../views/carrito.html">
+                <i class="uil uil-shopping-cart"></i>
+            </a>
+        </div>
+        <div class="logoUsuario">
+            <a class="navbar-brand" href="login.html">
+                <i class="uil uil-user"></i>
+            </a>
+        </div>
+    </nav>
+</div>
+<!--TERMINA NAV-->
+
+<!--LOGIN-->
+<div class="formularioLogin">
+    <form id="formularioLogin">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Escribe tu cuenta de mail</label>
+          <input type="email" class="form-control" id="mailRegistrado" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"><a href="nuevoUsuario.html">¿Aun no tienes cuenta?</a></div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="contraseñaRegistrada">
+        </div>
+        <input type="submit" value="¡Ingresar!" class="btn btn-outline-success">
+      </form>
+</div>
+<!--LOGIN-->
+
+<section> <!--FOOTER-->
+    <footer class="footer">               
+        <div class="footer__izq">
+            <img src="../img/icons/logo-inicio.png" alt="logo" class="footer__logo">
+            <div class="footer__iconos">
+                <img src="../img/icons/facebook.png" alt="facebook">
+                <img src="../img/icons/instagram.png" alt="instagram">
+                <img src="../img/icons/youtube.png" alt="youtube">
+            </div>
+            <p class="footer__blackwood">© 2022 Blackwood Carpintería. Todos los derechos reservados</p>
+        </div>
+
+        <div class="footer__centro">
+            <div>
+                <img src="../img/icons/maps.png" alt="Maps">
+                <p><span>Azopardo 8120</span> Santa Fe, Argentina</p>
+            </div>
+            <div>
+                <img src="../img/icons/telefono.png" alt="Telefono">
+                <p>+54 342 432 0000</p>
+            </div>
+            <div>
+                <img src="../img/icons/mail.png" alt="Mail">
+                <p>bwcarpintería@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer__der">
+            <p class="footer__acerca">
+                <span>Sobre Nosotros</span>
+                Somos una capintería familiar que mantiene esta hermosa tradición hace 79 años. Ubicados en Santa Fe, ofrecemos gran variedad de productos 100% originales hechos con el corazón. 
+            </p>
+        </div>
+    </footer>
+</section>  <!--FOOTER CIERRA-->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <script src="../js/vex.combined.min.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-plain'</script>
+   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/usuarioLogueado.js"></script>
+
+</body>
+</html>

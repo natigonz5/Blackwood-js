@@ -1,0 +1,541 @@
+*{
+    box-sizing: border-box;
+ }
+ 
+body{
+  background-color: #232323;
+}
+.contenedorNavbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.contenedorNav{
+    width: 100%;
+    background: linear-gradient(110deg, rgb(0, 161, 121),#02e2aa, #01a179); 
+
+}
+
+.nav-link{
+    margin-top: 5px;
+    font-size: 1em;
+    font-family: 'Poppins';
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: right;
+}
+.logoNavbar{
+    margin-left: 40px;
+    max-width: 70%;
+}
+
+.logoCarrito{
+    margin: 0px 20px;
+    min-width: 50px;
+}
+.logoUsuario{
+    margin: 0px 20px;
+    min-width: 50px;
+}
+
+.hero{
+  background-image: url(../img/Producto/sillaprincipal.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: 80px;
+  height: 700px;
+}
+
+.hero h2{
+    width: 45%;
+    font-size: 4.5em;
+    font-weight: 500;
+    line-height: 1.3em;
+    letter-spacing: 25px;
+    font-family: 'Poppins', 'sans-serif';
+    color: white;
+}
+
+.hero p{
+  width: 39%;
+  font-size: 22px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 2%;
+  margin-bottom: 2em;
+  letter-spacing: 1px;
+}
+
+.contenido-hero{
+  margin-top: 80px;
+  color: white;
+}
+
+#campoDeBusqueda{
+  width: 30%;
+}
+
+
+.tienda__header{
+  padding-top: 100px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.tienda__titulo{
+  margin: auto;
+  padding-bottom: 30px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+}
+
+.menu-btn{
+  position: absolute;
+  color: #02e2aa;
+  font-size: 20px;
+  margin: 0;
+  cursor: pointer;
+}  
+
+.menu-btn i{
+  margin-right: 20px;
+}
+
+/*SIDE BAR*/
+.side-bar {
+  background-color: rgba(41, 41, 41, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: auto;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-transition-property: left;
+  transition-property: left;
+  z-index: 1000;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .side-bar {
+    width: 240px;
+  }
+}
+
+.side-bar .menu {
+  width: 80%;
+  margin: 80px 0 80px 45px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .side-bar .menu {
+    width: 90%;
+    margin: 80px 0 80px 15px;
+  }
+}
+
+.side-bar .menu h4 {
+  color: #61e9be;
+}
+
+.side-bar .menu .item {
+  position: relative;
+  cursor: pointer;
+}
+
+.side-bar .menu .item a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  line-height: 60px;
+}
+
+.side-bar .menu .item a i {
+  margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item a:hover {
+  background: rgba(27, 27, 27, 0.603);
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu {
+  background: rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+.side-bar .menu .item .sub-menu a {
+  padding-left: 40px;
+}
+
+.side-bar .rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.side-bar .close-btn {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  right: 0;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.side-bar.active {
+  left: 0;
+}
+
+/*SIDE BAR CIERRA*/
+
+.tituloProductos {
+    color: white;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 6rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.cardsDeProductos {
+  margin: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+}
+.cardsDeProductos{
+  width: 80%;
+  padding: 50px;
+}
+.cartaProducto{
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.434);
+}
+.card{
+    border-radius: 10px;
+    background-color: #232323;
+    border:0;
+    font-family: 'Nunito Sans';
+
+}
+
+.card:hover{
+  transform: scale(1.01);
+  transition: .3s;
+
+}
+.textoPrecioCardProducto{
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.tituloCardProducto{
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.contenedorFotoProductoCard{
+    height: 400px;
+
+}
+.fotoProductoCard{
+     object-fit: contain;
+}
+
+.productoEscondido{
+    display: none;
+}
+
+.tablaCarrito{
+    margin: 50px;
+    color: white;
+}
+.sumaTablaPrecio, .sumaTabla{
+    font-family: 'Poppins';
+    color: white;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+}
+
+
+.table{
+  color: white;
+}
+/* LOGIN */
+
+.formularioLogin{
+    margin: auto;
+    width: 50%;
+    color: white;
+    height: 50vh;
+    padding: 50px;
+}
+
+.formularioLogin h1{
+  color: white;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.formularioRegistroUsuario{
+    margin: auto;
+    width: 50%;
+    color: white;
+    padding: 50px;
+}
+
+/*Pie de página*/
+.footer {
+    background: linear-gradient(90deg, #0e0d0d, #242424, #0e0d0d);
+    opacity: 90%;
+    bottom: 0;
+    color: white;
+    margin-top: 100px;
+    width: 100%;
+    text-align: left;
+    padding: 45px 100px;
+    /* Footer izq */
+    /* Footer centro */
+    /* Footer derecha */
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+      width: 100%;
+      padding: 3em;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer {
+      width: 100%;
+      padding: 2em;
+    }
+  }
+  
+  .footer__izq, .footer__centro, .footer__der {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .footer__izq {
+    width: 35%;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__izq {
+      width: 35%;
+      margin-right: 28px;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer__izq {
+      width: 90%;
+    }
+  }
+
+  .footer__logo{
+    max-width: 30%;
+  }
+  
+  
+  .footer__iconos {
+    color: #ffffff;
+    margin: 20px 0 18px;
+    padding: 0;
+  }
+  
+  .footer__iconos a {
+    display: inline-block;
+  }
+  
+  .footer__iconos img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  .footer__blackwood {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__blackwood {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer__blackwood {
+      width: 70%;
+      font-size: 13px;
+    }
+  }
+  
+  .footer__centro {
+    width: 30%;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__centro {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer__centro {
+      padding-top: 40px;
+      width: 90%;
+    }
+  }
+  
+  .footer__centro img {
+    text-align: center;
+    vertical-align: top;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__centro img {
+      margin-right: 8px;
+      padding-top: 10px;
+      vertical-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer__centro img {
+      margin-right: 8px;
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .footer__centro p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__centro p {
+      font-size: 17px;
+      margin-top: 22px;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer__centro p {
+      width: 70%;
+      font-size: 12px;
+      margin-top: 18px;
+    }
+  }
+  
+  .footer__der {
+    width: 22%;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__der {
+      width: 75%;
+      padding-top: 40px;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer__der {
+      padding-top: 40px;
+      width: 90%;
+    }
+  }
+  
+  .footer__acerca {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__acerca {
+      font-size: 17px;
+    }
+  }
+  
+  .footer__acerca span {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__acerca span {
+      font-size: 17px;
+    }
+  }
+  
+
+  .txtCenter{
+    text-align: center;
+}
+.botonesAccion{
+    display: flex;
+    font-weight: 350;
+    justify-content:space-around;
+}
+
+.botonFinalizarCompra{
+    margin: auto;
+    width: 10%;
+
+}
