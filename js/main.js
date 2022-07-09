@@ -1,4 +1,5 @@
 
+//PRODUCTOS
 //Obtener productos desde array
 function ArrayProductosParaViews(array){
     for(const producto of array){
@@ -54,6 +55,7 @@ function mostrarCategoria(categoria){
     }
 }
 
+// buscador en home 
 let busquedaCategoriaForm=document.getElementById("busquedaCategoria");
 busquedaCategoriaForm.addEventListener("submit",busquedaCategoria);
 
@@ -68,6 +70,8 @@ function busquedaCategoria(evento){
         }
     }
 }
+
+
 
 //side bar 
 

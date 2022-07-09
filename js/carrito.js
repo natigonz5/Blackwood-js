@@ -1,6 +1,7 @@
 let precioCarrito; 
 let leyendaCarroVacio=document.getElementById("carritoVacio");
 
+
 carritoCompras.length==0 && mostrarCarroVacio();
 carritoCompras.length>0 && mostrarCarroConProductos();
 
@@ -12,11 +13,21 @@ function calcularPrecioCarrito(){
     return precioCarrito;
 }
 
+function actualizarDatosCarrito(){
+    let precio=calcularPrecioCarrito();
+     //actualiza todos los items que utilizan precio carrito
+     document.getElementById("sumaTotalCarrito").innerHTML=`$ ${precio}`;
+     let valorEfectivo = document.getElementById("importePagoEfectivo");
+     valorEfectivo.innerHTML=`El precio del carrito pagando en efectivo es de $ ${calcularPrecioCarrito()*0.8}`
+     document.getElementById("importePagoCredito").innerHTML="";
+     tablaCuotas();
+}
+
 function mostrarCarroVacio(){
    leyendaCarroVacio.classList.remove("productoEscondido");
 }
-
 function mostrarCarroConProductos(){
+    //Escoder leyenda carro vacio
     leyendaCarroVacio.classList.add("productoEscondido");
     PagoCarroVacio.classList.remove("productoEscondido");
     mostrarCarritoTabla();
@@ -32,7 +43,7 @@ function mostrarCarritoTabla(){
         tablaCarrito.id="tablaCarrito";
         let tTiulo=document.createElement("thead");
         let filaTitulo=document.createElement("tr");
-    //Estructura tabla carrito
+    
         filaTitulo.innerHTML=`
         <th colspan="2">Producto</th>
         <th class="txtCenter">Cantidad</th>
@@ -44,7 +55,7 @@ function mostrarCarritoTabla(){
     
         let tBody = document.createElement("tBody");
         tBody.id="tBodyCarrito";
-   //Contenido carrito
+    
         for(const producto of carritoCompras){
             precioCarrito+=parseInt(producto.precio);
             let fila=document.createElement("tr");
@@ -77,10 +88,10 @@ function mostrarCarritoTabla(){
     } 
 }
 
-//Alerta compra final
+
 function finalizarCompra(){
     Swal.fire({
-        title: 'Gracias por su compra',
+        title: 'Muchas gracias por su compra',
         text: "Pronto recibirá su pedido",
         icon: 'success',
         style: {

@@ -6,7 +6,7 @@ let productosDisponibles=[];
 obtenerProductosAPI();
 obtenerCarrito();
 
-// Obtener productos desde JSON
+// Obtener productos desde archivo JSON local
 function obtenerProductosAPI(){
     const URLGET="js/productos.json"
     fetch(URLGET)
@@ -15,6 +15,12 @@ function obtenerProductosAPI(){
             productosDisponibles=info.productosDisponibles;
             cargarProductosDeArrayACards(productosDisponibles)
         })    
+}
+
+
+// si el usuario no esta logueado, sigue permitiendo la ejecucion, para mostrar productos
+function obtenerCarrito(){
+    carritoCompras=usuarioActivo?.carritoCompras; 
 }
 
 function confirmacionBorrarDelCarro(idProductoPorBorrar){
@@ -66,6 +72,7 @@ function agregarOtraUnidadAlCarro(id){
             toastAgregarCarro(producto);
             actualizarEstadoUsuarioSessionS();
             actualizarDatosCarrito();
+            //para trabajar sobre el carrito, con boton +1
             document.getElementById("cantidadProducto"+id).innerHTML=producto.cantidad;
             document.getElementById("precioTotal"+id).innerHTML=producto.cantidad*producto.precio;            
         }
@@ -73,6 +80,7 @@ function agregarOtraUnidadAlCarro(id){
 }
 
 function quitarUnaUnidadDelCarro(id){
+    //para trabajar sobre el carrito, con boton -1
     for(const producto of usuarioActivo.carritoCompras){
         if(producto.idProducto==id){
             if(producto.cantidad>1){
@@ -86,6 +94,7 @@ function quitarUnaUnidadDelCarro(id){
             }
         }
     }
+
 }
 
 function agregarAlCarrito(idProductoPorAgregar){
@@ -98,7 +107,7 @@ function agregarAlCarrito(idProductoPorAgregar){
                 agregarOtraUnidadAlCarro(idProductoPorAgregar);
             }
         }
-        //si no esta el
+        //si no esta
         if(productoEnCarro==false){
             agregarNuevoProducto(idProductoPorAgregar);
         }
